@@ -15,9 +15,9 @@ BUILT_OBJECTS= $(patsubst %,$(OBJ_DIR)/%,$(OBJECTS))
 CXX= g++
 CXXFLAGS= -Wall -O2 
 PROG=  ComplexityByStartPos
-LIBS= -L/FolderWhereBamToolsIs/lib -lbamtools -lz
-LDFLAGS = -Wl,-rpath /FolderWhereBamToolsIs/lib
-INCLUDES = -I/FolderWhereBamToolsIs/include
+LIBS= -L/usr/local/analysis/bamtools/2.3.0/lib -lbamtools -lz -L/usr/local/analysis/boost/1.54.0/lib
+LDFLAGS = -Wl,-rpath /usr/local/analysis/bamtools/2.3.0/lib
+INCLUDES = -I/usr/local/analysis/bamtools/2.3.0/include -I/usr/local/analysis/boost/1.54.0/include
 
 # ================
 # build targets
